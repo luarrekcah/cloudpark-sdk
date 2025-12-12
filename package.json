@@ -1,6 +1,6 @@
 {
   "name": "@luarrekcah/cloudpark-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SDK não-oficial para integração com a API CloudPark",
   "keywords": [
     "cloudpark",

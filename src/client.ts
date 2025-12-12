@@ -8,7 +8,7 @@ export class CloudParkClient {
     private baseURL: string = "https://sandbox.cloudpark.com.br"
   ) {
     this.api = axios.create({
-      baseURL,
+      baseURL: `${baseURL}/api/v1/integration`,
       headers: {
         Authorization: `Token ${token}`,
         "Content-Type": "application/json",

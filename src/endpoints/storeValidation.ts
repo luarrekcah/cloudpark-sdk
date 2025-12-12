@@ -1,13 +1,16 @@
-export interface StoreValidationRequest {
-  integration_id: number;
-  purchase_value: number;
-  id?: number;
-  qr_code?: string;
-}
+import { CloudParkClient } from "../client";
+import {
+  StoreValidationRequest,
+  StoreValidationResponse,
+} from "../types/storeValidation";
 
-export interface StoreValidationResponse {
-  status: string;
-  message?: string;
-  ticket_id?: number;
-  pending_value?: number;
+export class StoreValidationAPI {
+  constructor(private client: CloudParkClient) {}
+
+  validate(data: StoreValidationRequest) {
+    return this.client.post<StoreValidationResponse>(
+      "/storevalidation",
+      data
+    );
+  }
 }
