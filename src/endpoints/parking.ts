@@ -23,6 +23,6 @@ export class ParkingAPI {
    * feito um QRCode
    */
   reserve(data: ReserveParkingRequest) {
-    return this.client.post<ReserveParkingResponse>(`/reserveparking`);
+    return this.client.post<ReserveParkingResponse>(`/reserveparking`, data);
   }
 }
